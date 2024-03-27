@@ -32,6 +32,7 @@ jobs:
           chmod +x "${GITHUB_WORKSPACE}/.github/scripts/codeprcheck.sh"
           # run codeprcheck.sh which outputs an updated sarif with snyk code results on modified files  
           # the input for codeprcheck.sh is the sarif file exported from snyk code test 
+          ls -al
           ${GITHUB_WORKSPACE}/.github/scripts/codeprcheck.sh snyk.sarif snykupdated.sarif
           # list all of the contents of the workspace using long listing format (intended to help confirm updated sarif creation)
           ls -al
